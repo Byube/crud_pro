@@ -1,5 +1,5 @@
 <template>
-  <!-- <AppTopbar @menu-toggle="onMenuToggle" /> -->
+  <AppTopbar @menu-toggle="onMenuToggle" />
   <div class="layout-sidebar pt-0" @click="onSidebarClick">
     <SideNav :model="menu" @menuitem-click="onMenuItemClick" />
   </div>
@@ -18,40 +18,40 @@ import menuList from '../../tmp/menuList.json'
 export default {
   components: {
     SideNav,
-    // AppTopbar,
+    AppTopbar,
   },
   setup() {
     const {
       containerClass,
-      // changeMobileMenuState,
-      // changeStaticMenuInactive,
-      // layoutMode,
-      // mobileMenuActive,
-      // changeOverlayMenuState,
+      changeMobileMenuState,
+      changeStaticMenuInactive,
+      layoutMode,
+      mobileMenuActive,
+      changeOverlayMenuState,
       changeOverMenuState,
       changeMobileState,
       changeMenuOnclick,
     } = activeClassName();
     // const { checkOnMenu } = menuOnClick();
 
-    // //메뉴바 숨김 기능
-    // const onMenuToggle = (event) => {
-    //   changeMenuOnclick(true);
-    //   if (window.innerWidth >= 992) {
-    //     if (layoutMode.value === "overlay") {
-    //       if (mobileMenuActive.value === true) {
-    //         changeOverMenuState(true);
-    //       }
-    //       changeOverlayMenuState();
-    //       changeMobileState(false);
-    //     } else if (layoutMode.value === "static") {
-    //       changeStaticMenuInactive();
-    //     }
-    //   } else {
-    //     changeMobileMenuState();
-    //   }
-    //   event.preventDefault();
-    // };
+    //메뉴바 숨김 기능
+    const onMenuToggle = (event) => {
+      changeMenuOnclick(true);
+      if (window.innerWidth >= 992) {
+        if (layoutMode.value === "overlay") {
+          if (mobileMenuActive.value === true) {
+            changeOverMenuState(true);
+          }
+          changeOverlayMenuState();
+          changeMobileState(false);
+        } else if (layoutMode.value === "static") {
+          changeStaticMenuInactive();
+        }
+      } else {
+        changeMobileMenuState();
+      }
+      event.preventDefault();
+    };
     const onSidebarClick = () => {
       changeMenuOnclick(true);
     };
@@ -67,7 +67,7 @@ export default {
       }
     };
 
-    //메뉴바 로컬스토리지에서 호출하기
+    // 메뉴바 로컬스토리지에서 호출하기
     // const sideMenuList = ref([]);
     // const writeMenuList = async () => {
     //     const {menu_list} = await getMenuList();
@@ -79,7 +79,7 @@ export default {
       onMenuItemClick,
       menu: menuList.resultData,
       containerClass,
-      // onMenuToggle,
+      onMenuToggle,
       onSidebarClick,
     };
   },

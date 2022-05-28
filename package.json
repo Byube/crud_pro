@@ -19,7 +19,8 @@
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.2",
     "vuex-persistedstate": "^4.1.0",
-    "x2js": "^3.4.3"
+    "x2js": "^3.4.3",
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.1",
