@@ -1,12 +1,23 @@
 <template>
-  <div class="layout-topbar card">
-    <button
-      class="p-link layout-menu-button layout-topbar-button"
-      @click="onMenuToggle"
-    >
-      <i class="pi pi-bars"></i>
-    </button>
-
+  <div class="layout-topbar">
+     <div class="w-3">
+      <div class="flex align-items-center justify-content-start">
+        <span class="font-bold text-2xl">
+          <router-link to="/">
+            <span class="title_top_b">Admin</span>
+            <span class="title_top_a">Admin Client Sample</span>
+          </router-link>
+        </span>
+        <span>
+          <button
+            class="p-link layout-menu-button layout-topbar-button"
+            @click="onMenuToggle"
+          >
+            <i class="pi pi-bars"></i>
+          </button>
+        </span>
+      </div>
+    </div>
     <button
       class="p-link layout-topbar-menu-button layout-topbar-button"
       v-styleclass="{

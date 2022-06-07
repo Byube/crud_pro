@@ -1,14 +1,8 @@
 <template>
   <div class="layout-menu-container">
-    <!-- <div class="flex flex-row rounded-t-none">
-        <div class="font-bold text-4xl mt-2 pt-2 flex flex-row">
-          <img src="../../../assets/images/512.png" class="w-2 mr-2.5">
-          <p>Total Wallet</p>
-        </div>
-    </div> -->
     <AppSubmenu
       :items="model"
-      class="layout-menu border-t mt-3 pt-5"
+      class="layout-menu mt-3"
       :root="true"
       @menuitem-click="onMenuItemClick"
     />

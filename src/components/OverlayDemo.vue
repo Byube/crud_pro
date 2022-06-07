@@ -46,9 +46,9 @@
               @click="toggle"
               class="p-button-success"
             />
-            <OverlayPanel ref="op" appendTo="body" :showCloseIcon="true">
+            <!-- <OverlayPanel ref="op" appendTo="body" :showCloseIcon="true">
               <img src="images/nature/nature9.jpg" alt="Nature 9" />
-            </OverlayPanel>
+            </OverlayPanel> -->
           </div>
           <div class="col-6">
             <Button

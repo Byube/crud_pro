@@ -13,7 +13,7 @@ import { activeClassName } from "@/common/sideNavService";
 // import { ref } from "@vue/reactivity";
 
 //tmp
-import menuList from '../../tmp/menuList.json'
+import menuList from '@/tmp/menuList.json'
 
 export default {
   components: {
